@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descuento Gasolinera</title>
+</head>
+<body>
+    <script>
+
+
+// Pedir el monto consumido al usuario
+let monto = prompt("Ingresa el monto consumido:");
+
+// Convertir el monto a un número
+let montoNumero = parseFloat(monto);
+
+// Obtener el día de la semana actual (0 = Domingo, 1 = Lunes, ..., 6 = Sábado)
+let diaSemana = new Date().getDay();
+
+// Determinar el porcentaje de descuento
+let descuento = 0;
+if (montoNumero > 150) {
+  if (diaSemana === 0 || diaSemana === 6) {
+    descuento = 0.1;
+  } else {
+    descuento = 0.05;
+  }
+}
+
+// Mostrar el porcentaje de descuento o indicar que no tiene descuento
+if (descuento > 0) {
+  alert(`Tiene un descuento del ${descuento * 100}%`);
+} else {
+  alert("No tiene descuento");
+}
+
+    </script>
+    
+</body>
+</html>

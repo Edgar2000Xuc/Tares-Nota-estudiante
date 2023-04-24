@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas estudiante</title>
+</head>
+<body>
+    <script>
+      // Pedir la nota al usuario
+let nota = prompt("Ingresa tu nota:");
+
+// Convertir la nota a un número entero
+let notaNumero = parseInt(nota);
+
+if (notaNumero >= 90 && notaNumero <= 100) {
+  alert("Excelente");
+} else if (notaNumero >= 75 && notaNumero < 90) {
+  alert("Muy bien");
+} else if (notaNumero >= 65 && notaNumero < 75) {
+  alert("Bien");
+} else {
+  alert("Reprobado");
+}
+        
+    </script>
+    
+</body>
+</html>
